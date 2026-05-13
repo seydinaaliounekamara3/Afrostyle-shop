@@ -1,0 +1,454 @@
+ /* AFROSTYLE SHOP - style.css  */
+ 
+    /* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --couleur-principale: #2c2c2c;
+    --couleur-accent: #d4a843;
+    --couleur-fond: #f9f6f1;
+    --couleur-texte: #333333;
+    --police-titre: 'Georgia', serif;
+    --police-corps: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--police-corps);
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+}
+
+/* --- En-tête --- */
+.header {
+    background-color: var(--couleur-principale);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    font-family: var(--police-titre);
+    font-size: 28px;
+    color: var(--couleur-accent);
+    letter-spacing: 2px;
+}
+
+.header .slogan {
+    font-size: 13px;
+    color: #cccccc;
+    margin-top: 4px;
+}
+
+.header .header-contact {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+    /* --- Navigation --- */
+.nav {
+    background-color: var(--couleur-accent);
+}
+
+.nav ul {
+        list-style: none;
+    display: flex;
+    justify-content: center;
+        padding: 0;
+    margin: 0;
+}
+
+.nav ul li a {
+    display: block;
+        padding: 14px 28px;
+    color: var(--couleur-principale);
+    text-decoration: none;
+       font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+.nav ul li a:hover,
+.nav ul li a.actif {
+    background-color: var(--couleur-principale);
+    color: white;
+}
+
+    /* --- Bannière --- */
+.banniere {
+    background-color: var(--couleur-principale);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.banniere h1 {
+    font-family: var(--police-titre);
+    font-size: 42px;
+    color: var(--couleur-accent);
+    margin-bottom: 15px;
+}
+.banniere p {
+    font-size: 18px;
+    color: #dddddd;
+    margin-bottom: 30px;
+}
+/* PAGE COLLECTION */
+
+.collection-banner {
+    text-align: center;
+}
+
+.collection-description {
+    margin-bottom: 40px;
+}
+
+.collection-description p {
+    font-size: 16px;
+    color: #555555;
+}
+
+
+.btn {
+    display: inline-block;
+       background-color: var(--couleur-accent);
+    color: var(--couleur-principale);
+    padding: 12px 30px;
+    text-decoration: none;
+        font-weight: bold;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #c49835;
+}
+
+/* --- Contenu principal --- */
+.main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+    /* --- Titres de section --- */
+.titre-section {
+    font-family: var(--police-titre);
+    font-size: 26px;
+    color: var(--couleur-principale);
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--couleur-accent);
+    padding-bottom: 10px;
+}
+
+    /* --- Grille de produits --- */
+.grille-produits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+.carte-produit {
+    background-color: white;
+    border: 1px solid #e0ddd8;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+.carte-produit:hover {
+    transform: translateY(-4px);
+}
+.carte-produit img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.info-produit {
+    padding: 15px;
+}
+.info-produit h3 {
+    font-size: 16px;
+    color: var(--couleur-principale);
+    margin-bottom: 6px;
+}
+.categorie {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 8px;
+}
+.prix {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--couleur-accent);
+    margin-bottom: 12px;
+}
+.btn-ajouter {
+    display: block;
+    text-align: center;
+    background-color: var(--couleur-principale);
+    color: white;
+    padding: 9px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.btn-ajouter:hover {
+    background-color: var(--couleur-accent);
+    color: var(--couleur-principale);
+}
+
+        /* --- Tableau --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: white;
+}
+table th {
+    background-color: var(--couleur-principale);
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+table td {
+    padding: 11px 15px;
+    border-bottom: 1px solid #e8e4df;
+    font-size: 14px;
+}
+table tr:nth-child(even) {
+    background-color: #f2ede6;
+}
+table tr:hover {
+    background-color: #ede8e0;
+}
+/* --- Section À propos --- */
+.section-apropos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.section-apropos img {
+    width: 100%;
+    border-radius: 6px;
+}
+.section-apropos h2 {
+    font-family: var(--police-titre);
+    font-size: 28px;
+    color: var(--couleur-principale);
+    margin-bottom: 15px;
+}
+.section-apropos p {
+    margin-bottom: 15px;
+    color: #555555;
+}
+    /* --- Valeurs --- */
+.valeurs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.valeur-item {
+    flex: 1;
+    background-color: var(--couleur-principale);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+.valeur-item h3 {
+    color: var(--couleur-accent);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.valeur-item p {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+    /* --- Formulaire de contact --- */
+.formulaire-contact {
+    background-color: white;
+    padding: 40px;
+    border-radius: 6px;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.formulaire-contact h2 {
+    font-family: var(--police-titre);
+    font-size: 24px;
+    color: var(--couleur-principale);
+    margin-bottom: 25px;
+}
+.champ {
+    margin-bottom: 20px;
+}
+.champ label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--couleur-principale);
+}
+.champ input,
+.champ textarea,
+.champ select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: var(--police-corps);
+    font-size: 14px;
+    color: var(--couleur-texte);
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+.champ input:focus,
+.champ textarea:focus,
+.champ select:focus {
+    outline: none;
+    border-color: var(--couleur-accent);
+}
+.champ textarea {
+    height: 130px;
+    resize: vertical;
+}
+.btn-envoyer {
+    background-color: var(--couleur-principale);
+    color: white;
+    border: none;
+        padding: 13px 35px;
+    font-size: 15px;
+       font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-envoyer:hover {
+    background-color: var(--couleur-accent);
+    color: var(--couleur-principale);
+}
+        /* --- Infos contact --- */
+.info-contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.contact-item {
+    background-color: white;
+    padding: 25px 20px;
+        border-radius: 6px;
+    text-align: center;
+    border-top: 4px solid var(--couleur-accent);
+}
+.contact-item h3 {
+    color: var(--couleur-principale);
+    font-size: 16px;
+        margin-bottom: 8px;
+}
+.contact-item p {
+    color: #666666;
+    font-size: 14px;
+}
+
+    /* --- Réseaux sociaux --- */
+.reseaux-sociaux {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reseaux-sociaux a {
+    display: inline-block;
+        margin: 0 8px;
+        color: var(--couleur-principale);
+    text-decoration: none;
+        font-weight: bold;
+    font-size: 14px;
+    padding: 8px 18px;
+    border: 2px solid var(--couleur-principale);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+    .reseaux-sociaux a:hover {
+    background-color: var(--couleur-principale);
+    color: white;
+}
+
+    /* --- Présentation rapide --- */
+.presentation {
+    background-color: white;
+            padding: 30px;
+        border-radius: 6px;
+    margin-bottom: 50px;
+    border-left: 5px solid var(--couleur-accent);
+}
+
+    .presentation p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* --- Pied de page --- */
+    .footer {
+    background-color: var(--couleur-principale);
+    color: #aaaaaa;
+        text-align: center;
+    padding: 25px 40px;
+        font-size: 13px;
+    margin-top: 40px;
+}
+
+.footer a {
+        color: var(--couleur-accent);
+    text-decoration: none;
+}
+
+    /* --- Responsive tablette --- */
+@media (max-width: 768px) {
+    .grille-produits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-apropos {
+            grid-template-columns: 1fr;
+    }
+    .valeurs {
+            flex-direction: column;
+    }
+    .info-contact {
+            grid-template-columns: 1fr;
+    }
+    .header {
+            flex-direction: column;
+            text-align: center;
+         gap: 10px;
+    }
+    .nav ul {
+        flex-wrap: wrap;
+    }
+}
+        /* --- Responsive mobile --- */
+@media (max-width: 480px) {
+    .grille-produits {
+        grid-template-columns: 1fr;
+    }
+    .banniere h1 {
+        font-size: 28px;
+    }
+    .formulaire-contact {
+        padding: 25px 20px;
+    }
+}
